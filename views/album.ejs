@@ -1,0 +1,27 @@
+<% include partials/header %>
+<header class="jumbotron">
+        <div class="container">
+            
+        <center>
+             <h2>Albums</h2>
+            
+            <p>
+                <a class="btn btn-primary btn-lg" href="/album/new">Create a new Album</a>
+             </p>
+        </div>
+            
+        </center>
+           
+    </header>
+ 
+
+ 
+
+<% albumList.forEach(function(album){ %>
+<div>
+<h2><a href="/album/<%=album.name%>"><%=    album.name %></a>   </h2>
+</div>
+
+<% }); %>
+
+<%include partials/footer %>

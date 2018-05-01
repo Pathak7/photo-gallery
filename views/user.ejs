@@ -1,0 +1,49 @@
+<% include partials/header %>
+
+<center>
+    <h2>Welcome <%=user["username"] %></h2>
+    
+</center>
+
+
+
+<div class="row" style="display:flex; flex-wrap: wrap;">
+    <div class="col-lg-12">
+        <center>
+           <img src="<%=user.profilepicture%>" style="width:60%; height:200px;" >
+         </center>
+         
+
+           <% if(typeof currentUser !== 'undefined'){ %>
+            <% if(currentUser.username==user["username"]){ %>
+                 <center>
+                 <a class="btn btn-primary btn-lg" href="/user/<%=currentUser.username%>/edit">EDIT PROFILE</a>
+                 </center>
+            <% }} %>
+
+    </div>
+</div>
+
+<center>
+    <h3><%=user.fname%> <%=user.lname%></h3>
+    <h3>
+        Email : <%=user.email%>
+    </h3>
+    <h3>
+        Gender : <%=user.gender%>
+    </h3>
+    
+</center>
+
+<center>
+    <h2>Created Albums </h2>
+    <%user.createdAlbums.forEach(function(album){ %>
+    
+    <h3><li> <a href="/album/<%=album%>"><%=album%></a></li></h3>
+    
+   <% }); %>
+</center>
+
+
+
+<% include partials/footer %>

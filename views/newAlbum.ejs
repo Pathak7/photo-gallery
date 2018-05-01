@@ -1,0 +1,38 @@
+<% include partials/header %>
+<div class="container">
+    <div class="row">
+        <h1 style="text-align: center">Create a New Album</h1>
+        <div style="width: 30%; margin: 25px auto;">
+            <form action="/album" method="POST">
+                <div class="form-group">
+                    <input class="form-control" type="text" name="name" placeholder="Album Name" required>
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="description" placeholder="Description">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="cover" placeholder="Cover image url" required>
+                </div>
+                <div class="form-group">
+                  <select class="form-control" name="visibilty">
+  <option value="public">Public</option>
+  <option value="private">Private</option>
+  
+ 
+</select>
+</div>
+                <div class="form-group">
+                    <button class="btn btn-lg btn-primary btn-block">Submit!</button>
+                </div>
+            </form>
+            <a href="/album">Go Back</a>
+        </div>
+    </div>
+</div>
+
+
+
+
+  
+ 
+ <% include partials/footer %>

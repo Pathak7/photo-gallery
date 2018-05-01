@@ -1,0 +1,15 @@
+<% include partials/header %>
+
+
+<center>
+    <h2>
+        Currently registered users
+    </h2>
+<%    userList.forEach(function(user){ %>
+    
+    <li>
+        <%=user.username%>
+        
+    </li>
+<%    }); %>
+</center>

@@ -1,0 +1,22 @@
+<% include partials/header %>
+
+<center>
+    <h1> <%=picture[1]%></h1>
+
+<img class="img-responsive" src="<%=picture[0]%>" >
+
+<h3>
+    <%=  picture[2]  %>
+</h3>
+
+<h4>
+    Likes: <%=picture[3]%>
+</h4>
+   <form id="delete" action="/album/<%= albumname %>/<%=picture[1]%>?_method=DELETE" method="POST">
+                <button class="btn btn-danger btn-lg">Delete picture</button>
+            </form>
+    
+</center>
+
+
+<% include partials/footer %>
